@@ -1,0 +1,18 @@
+| Testes                    | Aluguel        | Compra     |
+| ------------------------- | -------------- | ---------- |
+| Valor do aluguel (R\$)    | 1800           | 2200       |
+| Tempo de uso (meses)      | 44             | 36         |
+| Entrada                   | 20000          | 30000      |
+| Parcelas do financiamento | 1200           | 800        |
+
+O simulador compara o custo total de alugar com o custo total de comprar um carro ao longo do tempo de uso informado.
+
+Custo Aluguel = valor do aluguel × tempo de uso
+
+Custo Compra = entrada + (parcelas × tempo) + (manutenção × tempo) + seguro + (combustível × tempo)
+
+O simulador então compara:
+
+Se Custo Compra for menor → Recomenda Comprar
+
+Se Custo Aluguel for menor → Recomenda Alugar

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador: Alugar ou Comprar?</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <span style="font-size: 1.2em;">🚘</span> ViaCerta
+  </header>
+
+  <section class="descricao-site text-center">
+    <div class="container py-3">
+      <p class="text-white fs-5 m-0">
+        Compare custos e descubra se vale mais a pena alugar ou comprar um carro. 
+        Preencha os campos e veja o que compensa para o seu bolso!
+      </p>
+    </div>
+  </section>
+
+  <div class="info-box container d-flex justify-content-between flex-wrap text-center mb-4">
+    <div class="flex-fill mx-2 my-2">
+      <div style="font-size:30px;">🔢</div>
+      <strong>1. Preencha os campos</strong><br>
+      Insira os custos do carro e do aluguel.
+    </div>
+    <div class="flex-fill mx-2 my-2">
+      <div style="font-size:30px;">⚖️</div>
+      <strong>2. Clique em Calcular</strong><br>
+      O simulador faz a conta pra você.
+    </div>
+    <div class="flex-fill mx-2 my-2">
+      <div style="font-size:30px;">💡</div>
+      <strong>3. Compare e Decida</strong><br>
+      Veja se compensa comprar ou alugar.
+    </div>
+  </div>
+
+
+  <div class="container">
+    <form id="formulario">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Valor do carro (R$)</label>
+          <input type="number" class="form-control" id="valor-carro" value="70000" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Valor mensal do aluguel (R$)</label>
+          <input type="number" class="form-control" id="valor-aluguel" value="1800" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Tempo de uso (meses)</label>
+          <input type="number" class="form-control" id="tempo-uso" value="36" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Custo mensal de manutenção (R$)</label>
+          <input type="number" class="form-control" id="manutencao" value="300" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Valor do seguro anual (R$)</label>
+          <input type="number" class="form-control" id="seguro" value="2000" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Valor de entrada (R$)</label>
+          <input type="number" class="form-control" id="entrada" value="20000" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Parcelas do financiamento (R$)</label>
+          <input type="number" class="form-control" id="financiamento" value="1200" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Custo mensal com combustível (R$)</label>
+          <input type="number" class="form-control" id="combustivel" value="400" />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4"><i class="bi bi-calculator"></i> Calcular</button>
+      
+    </form>
+    
+    <section class="descricao-resultado text-center mt-4">
+      <div class="info-box container text-center mb-4">
+        <strong>Simples assim:</strong> após clicar em <strong>Calcular</strong>, você verá o resultado <u>logo abaixo</u>!
+        <br><br>
+        🔍 O sistema vai indicar se <strong>vale mais a pena comprar ou alugar</strong>.
+        <br>
+        📊 Em seguida, apresentaremos <strong>ofertas compatíveis</strong> com cada opção para você comparar.
+      </div>
+    </section>
+
+    <div id="resultado" class="mt-5" style="display: none;">
+      <h3>Resultado da Simulação</h3>
+      <p id="mensagem" class="lead"></p>
+
+      <h4>Opções de Aluguel</h4>
+      <div id="ofertas-alugar" class="row gy-4"></div>
+
+      <h4 class="mt-4">Opções de Compra</h4>
+      <div id="ofertas-comprar" class="row gy-4"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
