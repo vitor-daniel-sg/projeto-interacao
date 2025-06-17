@@ -68,6 +68,12 @@ header {
   font-size: 20px;
 }
 
+.resultado-destaque i {
+  margin-right: 8px;
+  font-size: 22px;
+  vertical-align: middle;
+}
+
 .footer-contato {
   background-color: #4dabf7;
   color: white;
@@ -77,10 +83,4 @@ header {
   font-weight: 500;
   margin-top: 60px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.resultado-destaque i {
-  margin-right: 8px;
-  font-size: 22px;
-  vertical-align: middle;
 }
